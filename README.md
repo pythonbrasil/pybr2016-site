@@ -1,3 +1,5 @@
 # pythonbrasil12-site
 
-Initial commit.
+Esse é o portal oficial da Python Brasil 12.
+
+
