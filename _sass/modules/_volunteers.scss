@@ -1,0 +1,27 @@
+.volunteers {
+  padding: 4em 0;
+
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  ul {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+  li {
+    list-style: none;
+    line-height: 30px;
+  }
+
+  a {
+    color: #1B77D8;
+  }
+}

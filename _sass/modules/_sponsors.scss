@@ -1,0 +1,81 @@
+.sponsors {
+  background-color: #f2f2f2;
+  padding: 4em 0;
+
+  h1 {
+    font-family: "Panton Light";
+    text-align: center;
+    color: #333;
+  }
+
+  .sponsors-list {
+    list-style: none;
+    @include clearfix;
+    font-size: 0;
+    margin: 0 -15px;
+
+    .item {
+      font-size: 1rem;
+      vertical-align: top;
+      display: inline-block;
+      margin: 15px;
+      width: calc(25% - 30px);
+
+      .category {
+        font-family: "Panton Light";
+        color: #333;
+      }
+
+      .imgs {
+        padding-top: 25px;
+
+        img {
+          height: 12em;
+          margin-right: 1em;
+          display: inline-block;
+        }
+      }
+
+      .item-link {
+        text-decoration: none;
+      }
+
+      .link {
+        font-style: italic;
+      }
+    }
+
+    .no-sponsor {
+      background-color: #eaeaea;
+      display: table;
+      padding: 15px;
+      min-width: 20em;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+
+      img, p {
+        @extend .v-align;
+      }
+
+      img {
+        margin-right: 1em;
+        width: 3em;
+      }
+
+      p {
+        color: #333;
+      }
+    }
+  }
+
+  @media(max-width: 767px) {
+    .sponsors-list .item {
+      width: calc(50% - 30px);
+    }
+  }
+}

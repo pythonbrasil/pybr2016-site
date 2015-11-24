@@ -1,0 +1,14 @@
+.heading {
+  font-size: 2em;
+  font-family: "Panton Bold";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend .heading;
+  color: #fff;
+}
+
+p {
+  line-height: 1.5em;
+  color: #fff;
+}
