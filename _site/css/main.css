@@ -243,12 +243,6 @@ a:hover {
             color: #fff;
             text-decoration: none;
             margin: 1em; }
-          .welcome .header .menu .list .item .item-link-blog {
-            display: inline-block;
-            font-family: "Panton Bold";
-            color: #ff3;
-            text-decoration: none;
-            margin: 1em; }
             .welcome .header .menu .list .item .item-link:hover, .welcome .header .menu .list .item .item-link .active {
               color: #F0CB1F; }
     .welcome .header .menu-scroll {
