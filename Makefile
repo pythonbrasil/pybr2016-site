@@ -21,28 +21,36 @@ ifeq ($(RELATIVE), 1)
 endif
 
 help:
-	@echo 'Makefile for a pelican Web site                                           '
-	@echo '                                                                          '
-	@echo 'Usage:                                                                    '
-	@echo '   make html                           (re)generate the web site          '
-	@echo '   make clean                          remove the generated files         '
-	@echo '   make regenerate                     regenerate files upon modification '
-	@echo '   make publish                        generate using production settings '
-	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
-	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
-	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
-	@echo '   make stopserver                     stop local server                  '
-	@echo '   make github                         upload the web site via gh-pages   '
-	@echo '   make ansible-setup                  build environment with ansible     '
-	@echo '                                                                          '
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
-	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
-	@echo '                                                                          '
+	@echo 'Makefile for a pelican Web site                                            '
+	@echo '                                                                           '
+	@echo 'Usage:                                                                     '
+	@echo '   make theme                          (re)generate the theme files        '
+	@echo '   make html                           (re)generate the web site           '
+	@echo '   make clean                          remove the generated files          '
+	@echo '   make clean-theme                    remove the generated files for theme'
+	@echo '   make regenerate                     regenerate files upon modification  '
+	@echo '   make publish                        generate using production settings  '
+	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000 '
+	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80     '
+	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh     '
+	@echo '   make stopserver                     stop local server                   '
+	@echo '   make github                         upload the web site via gh-pages    '
+	@echo '   make ansible-setup                  build environment with ansible      '
+	@echo '                                                                           '
+	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html    '
+	@echo 'Set the RELATIVE variable to 1 to enable relative urls                     '
+	@echo '                                                                           '
 
-html:
+theme:
+	cd theme; make all
+
+html: theme
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-clean:
+clean-theme:
+	cd theme; make clean
+
+clean: clean-theme
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
 regenerate:
@@ -74,7 +82,7 @@ stopserver:
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
-publish:
+publish: theme
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 github: publish
@@ -84,4 +92,4 @@ github: publish
 ansible-setup:
 	ansible-playbook ansible/setup.yml -K
 
-.PHONY: html help clean regenerate serve serve-global devserver publish github ansible-setup
+.PHONY: theme html help clean clean-theme regenerate serve serve-global devserver publish github ansible-setup
