@@ -8,7 +8,7 @@ gulp.task('js', function(){
     return gulp.src('js-src/**/*.js')
         .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('js/'));
+        .pipe(gulp.dest('static/js/'));
 });
 
 gulp.task('default', ['js']);
