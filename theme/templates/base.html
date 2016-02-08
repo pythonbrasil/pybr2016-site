@@ -1,31 +1,35 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
+  <head>
+    <meta charset="utf-8">
+    <link href="{{ SITEURL }}/theme/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock %}">
+
+    {% block style %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+    {% endblock %}
+  </head>
 
   <body>
-    <div class="main">
-      {% include welcome.html %}
+  <div class="main">
+    {% block main %}
+    {% endblock %}
+    <footer class="footer">
+      <div class="row">
+        <p>PythonBrasil is a non-proﬁt volunteer-driven conference for promoting the open-source Python programming language. It is supported by the Brazilian Python Association (APyB) and by the Python Software Foundation (PSF).</p>
 
-      {% include about.html %}
+        <img src="{{ SITEURL }}/images/logo-gray.svg" alt="Python Brazil - Logo">
+      </div>
+    </footer>
+  </div>
 
-      {% include speakers.html %}
-      
-      {% include location.html %}
-      
-      {% include schedule.html %}
-
-      {% include sponsors.html %}
-      
-      {% include volunteers.html %}
-
-      {% include footer.html %}
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/main.js"></script>
+  {% block javascript %}
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="{{ SITEURL }}/theme/js/main.js"></script>
+  {% endblock %}
   </body>
 </html>
