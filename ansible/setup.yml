@@ -1,0 +1,62 @@
+---
+- name: Setup environment for developing the PythonBrasil12 Site (Pelican)
+  hosts: localhost
+  connection: localhost
+
+  # vars:
+  #  fullname: Magnun Leno
+
+  vars_files:
+      - "vars/packages-{{ ansible_os_family }}.yml"
+
+  tasks:
+    - set_fact: shellrc="~/.zshrc"
+      when: ansible_user_shell == "/bin/zsh"
+
+    - set_fact: shellrc="~/.bashrc"
+      when: ansible_user_shell == "/bin/bash"
+
+    - name: Install OS Requred packages
+      with_items: "{{ os_packages }}"
+      action: "{{ ansible_pkg_mgr }} state=installed name={{ item }}"
+      sudo: yes
+      tags: os-requirements-pkgs
+
+    - name: Install Gulp
+      npm: name={{ item }} path=../
+      with_items:
+        - gulp
+        - gulp-uglify
+        - gulp-concat
+      tags: gulp
+
+    - name: Checks that WORKON_HOME is present
+      shell: "grep \"^export WORKON_HOME\" {{ shellrc }}"
+      ignore_errors: True
+      register: workon_home
+      tags: virtualenv
+
+    - name: Forces WORKON_HOME="~/venv"
+      set_fact: source_mkvirtualenv="WORKON_HOME=\"~/venv\" . /usr/bin/virtualenvwrapper.sh"
+      when: workon_home.rc == 1
+      tags: virtualenv
+
+    - name: Uses WORKON_HOME variable defined in environment
+      set_fact: source_mkvirtualenv=". /usr/bin/virtualenvwrapper.sh"
+      when: workon_home.rc == 0
+      tags: virtualenv
+
+    - name: Remove any old virtualenv with this name
+      shell: "{{ source_mkvirtualenv }} && rmvirtualenv pybr12-site"
+      ignore_errors: True
+      register: workon_home
+      tags: virtualenv
+
+    - name: Creates virtualenv
+      shell: "{{ source_mkvirtualenv }} && mkvirtualenv pybr12-site"
+      tags: virtualenv
+
+    - name: Install requirements
+      shell: "{{ source_mkvirtualenv }} && workon pybr12-site && pip install -r ../requirements.txt"
+      tags: virtualenv
+   
