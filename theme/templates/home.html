@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% if page.title %}{{ page.title }}{% else %}{{ SITENAME }}{% endif %}
+{% endblock %}
+
+{% block main %}
+  {% include "includes/welcome.html" %}
+
+  {% include "includes/about.html" %}
+
+  {% include "includes/speakers.html" %}
+
+  {% include "includes/location.html" %}
+
+  {% include "includes/schedule.html" %}
+
+  {% include "includes/sponsors.html" %}
+
+  {% include "includes/volunteers.html" %}
+{% endblock %}
