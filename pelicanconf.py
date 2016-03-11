@@ -52,7 +52,7 @@ AUTHOR_FEED_RSS = None
 CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
 
-STATIC_PATHS = ['extra/CNAME']
+STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 # Plugins
