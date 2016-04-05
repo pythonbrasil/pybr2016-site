@@ -1,5 +1,7 @@
 # PythonBrasil[12]
 
+[![Build Status](https://travis-ci.org/pythonbrasil/pythonbrasil12-site.svg?branch=master)](https://travis-ci.org/pythonbrasil/pythonbrasil12-site)
+
 Esse é o portal oficial da Python Brasil 12, criado de maneira colaborativa.
 
 
