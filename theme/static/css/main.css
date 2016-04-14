@@ -1,0 +1,614 @@
+@font-face {
+  font-family: "Panton Bold";
+  src: url("../fonts/Panton-BlackCaps.otf"); }
+@font-face {
+  font-family: "Panton Bold Italic";
+  src: url("../fonts/Panton-BlackitalicCaps.otf"); }
+@font-face {
+  font-family: "Panton Light";
+  src: url("../fonts/Panton-LightCaps.otf"); }
+@font-face {
+  font-family: "Panton Light Italic";
+  src: url("../fonts/Panton-LightitalicCaps.otf"); }
+.heading, h1, h2, h3, h4, h5, h6 {
+  font-size: 2em;
+  font-family: "Panton Bold"; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff; }
+
+p {
+  line-height: 1.5em;
+  color: #fff; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+*, html, body {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+
+html, body {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@font-face {
+  font-family: "Panton Bold";
+  src: url("../fonts/Panton-BlackCaps.otf"); }
+@font-face {
+  font-family: "Panton Bold Italic";
+  src: url("../fonts/Panton-BlackitalicCaps.otf"); }
+@font-face {
+  font-family: "Panton Light";
+  src: url("../fonts/Panton-LightCaps.otf"); }
+@font-face {
+  font-family: "Panton Light Italic";
+  src: url("../fonts/Panton-LightitalicCaps.otf"); }
+.heading, h1, h2, h3, h4, h5, h6 {
+  font-size: 2em;
+  font-family: "Panton Bold"; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff; }
+
+p {
+  line-height: 1.5em;
+  color: #fff; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+*, html, body {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+
+html, body {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.main {
+  position: relative;
+  min-height: 100%; }
+
+.row {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 1199px) {
+    .row {
+      padding: 0 25px; } }
+
+.v-align, .sponsors .sponsors-list .no-sponsor img, .sponsors .sponsors-list .no-sponsor p {
+  vertical-align: middle;
+  display: table-cell; }
+
+.no-border {
+  border: none; }
+
+.centered {
+  text-align: center; }
+
+.left-aligned {
+  text-align: left; }
+
+.pull-left {
+  float: left; }
+
+.right-aligned {
+  text-align: right; }
+
+.pull-right {
+  float: right; }
+
+.no-scroll {
+  overflow: hidden; }
+
+.fit, .welcome .header .logo {
+  width: 1%;
+  white-space: nowrap; }
+
+@media (max-width: 767px) {
+  .responsive-table {
+    overflow: auto;
+    width: 100%; } }
+.link {
+  color: #1D8BF6; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  html, body {
+    font-size: 15px; } }
+@media (min-width: 640px) and (max-width: 767px) {
+  html, body {
+    font-size: 14px; } }
+@media (min-width: 480px) and (max-width: 639px) {
+  html, body {
+    font-size: 13px; } }
+@media (min-width: 320px) and (max-width: 479px) {
+  html, body {
+    font-size: 12px; }
+    html .welcome .info h1, body .welcome .info h1 {
+      font-size: 2em; }
+    html .sponsors .sponsors-list .item .imgs img, body .sponsors .sponsors-list .item .imgs img {
+      height: 10em; }
+    html .footer img, body .footer img {
+      padding-right: 1em; } }
+@media (max-width: 319px) {
+  html, body {
+    font-size: 10px; } }
+.btn, .welcome .info .register {
+  display: inline-block;
+  max-width: 100%;
+  height: 40px;
+  line-height: 40px;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-family: "Panton Bold";
+  font-size: .875em;
+  color: #fff;
+  background-color: #F0CB1F;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  padding: 0 1em; }
+  .btn:hover, .welcome .info .register:hover {
+    background-color: #e6c00f;
+    text-decoration: none; }
+  .btn:active, .welcome .info .register:active {
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.3); }
+  .btn:disabled, .welcome .info .register:disabled {
+    opacity: .5;
+    background-color: #F0CB1F; }
+  @media (max-width: 479px) {
+    .btn, .welcome .info .register {
+      min-width: 0;
+      width: 100%; } }
+
+.welcome {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative; }
+  .welcome:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(37, 140, 246, 0.75); }
+  .welcome .header {
+    position: relative;
+    display: table;
+    width: 100%;
+    padding: 2em 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5); }
+    .welcome .header .logo {
+      width: 30%;
+      float: left; }
+      .welcome .header .logo img, .welcome .header .logo span {
+        vertical-align: middle; }
+      .welcome .header .logo img {
+        width: 1.5em;
+        margin-right: .5em; }
+      .welcome .header .logo span {
+        font-size: .55em;
+        font-family: "Panton Light"; }
+        .welcome .header .logo span strong {
+          font-family: "Panton Bold"; }
+    .welcome .header .menu {
+      float: left;
+      text-align: left; }
+      .welcome .header .menu .list {
+        display: inline-block;
+        text-align: left;
+        list-style: none;
+        margin: 0 -1em; }
+        .welcome .header .menu .list .item {
+          display: inline-block; }
+          .welcome .header .menu .list .item .item-link {
+            display: inline-block;
+            font-family: "Panton Bold";
+            color: #fff;
+            text-decoration: none;
+            margin: 1em; }
+            .welcome .header .menu .list .item .item-link:hover, .welcome .header .menu .list .item .item-link .active {
+              color: #F0CB1F; }
+    .welcome .header .menu-scroll {
+      position: fixed;
+      background-color: #1B77D8;
+      z-index: 999;
+      top: 0;
+      width: 100%;
+      left: 0;
+      padding: 5px 30px;
+      display: table;
+      top: -70px; }
+      .welcome .header .menu-scroll .center {
+        max-width: 1200px;
+        margin: auto;
+        display: block; }
+      .welcome .header .menu-scroll .logo {
+        float: left;
+        margin-top: 6px; }
+        .welcome .header .menu-scroll .logo span {
+          font-size: .55em; }
+        .welcome .header .menu-scroll .logo img {
+          width: 35px; }
+      .welcome .header .menu-scroll .menu {
+        float: right; }
+    @media (max-width: 905px) {
+      .welcome .header .menu .list {
+        font-size: .8em;
+        vertical-align: middle; } }
+    @media (max-width: 767px) {
+      .welcome .header .menu-scroll {
+        display: none; }
+      .welcome .header .menu {
+        display: none; } }
+  .welcome .info {
+    position: relative;
+    padding: 8em 0 4em 0; }
+    .welcome .info h1 {
+      font-size: 3.5em;
+      font-family: "Panton Light"; }
+    .welcome .info h2 {
+      font-size: 2em;
+      margin-top: 2em; }
+    .welcome .info h3 {
+      font-size: 1em; }
+    .welcome .info p {
+      font-family: "Panton Light";
+      margin: .5em 0 2em 0; }
+
+.about {
+  padding: 4em 0; }
+  .about:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .about .column {
+    width: 50%;
+    padding: 0 5%;
+    text-align: center;
+    float: left; }
+  .about svg {
+    border: solid 1px #cecece;
+    border-radius: 50%;
+    padding: 1em;
+    width: 7em;
+    height: 7em;
+    margin-bottom: 2em; }
+  .about h1, .about p {
+    color: #333;
+    margin-bottom: .5em; }
+  .about a {
+    color: #1D8BF6; }
+  @media (max-width: 479px) {
+    .about .column {
+      width: 100%; }
+    .about .column:first-child {
+      margin-bottom: 5em; } }
+
+.speakers {
+  padding: 3em 0;
+  background-color: #f2f2f2; }
+  .speakers h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; }
+  .speakers .speakers-list {
+    list-style: none;
+    font-size: 0;
+    margin: 0 -15px; }
+    .speakers .speakers-list:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .speakers .speakers-list .speaker {
+      font-size: 1rem;
+      vertical-align: top;
+      display: inline-block;
+      margin: 15px;
+      width: calc(25% - 30px); }
+      .speakers .speakers-list .speaker .photo {
+        width: 100%;
+        background-color: #eaeaea;
+        background-image: url("../images/speaker.svg");
+        background-size: 50% 50%;
+        background-position: center;
+        background-repeat: no-repeat; }
+        .speakers .speakers-list .speaker .photo img {
+          width: 100%; }
+      .speakers .speakers-list .speaker .speaker-link {
+        text-decoration: none; }
+      .speakers .speakers-list .speaker .speaker-name {
+        color: #333;
+        font-family: "Panton Light Italic";
+        margin: 30px 0 15px 0; }
+      .speakers .speakers-list .speaker .speaker-description {
+        color: #333; }
+      .speakers .speakers-list .speaker .link {
+        font-style: italic; }
+  @media (max-width: 767px) {
+    .speakers .speakers-list .speaker {
+      width: calc(50% - 30px); } }
+  @media (max-width: 319px) {
+    .speakers .speakers-list .speaker {
+      width: 100%; } }
+
+.location {
+  text-align: center;
+  padding: 8em 0 10em 0;
+  background-image: url("../images/place.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; }
+  .location:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .location * {
+    position: relative; }
+  .location svg {
+    width: 3em; }
+  .location h1 {
+    margin: 15px 0; }
+  .location .link {
+    color: #fff;
+    font-family: "Panton Light"; }
+  .location .booking {
+    padding: 1em 8em;
+    font-size: .8em; }
+  .location .rates {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  .location .tax {
+    float: left;
+    width: 50%; }
+    .location .tax h2 {
+      font-size: 1em; }
+  @media (max-width: 479px) {
+    .location {
+      padding-bottom: 18em; }
+      .location .booking {
+        padding: 1em 1.5em; }
+      .location .tax {
+        width: 100%;
+        margin-bottom: 2em; } }
+
+.schedule {
+  padding: 4em 0; }
+  .schedule h1 {
+    color: #333;
+    text-align: center; }
+  .schedule .schedule-description {
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px; }
+  .schedule .day-description {
+    color: #333;
+    margin-bottom: 30px; }
+  .schedule .days .list {
+    font-size: 0;
+    list-style: none;
+    border-bottom: solid 1px #ccc; }
+    .schedule .days .list .item {
+      font-size: 1rem;
+      display: inline-block; }
+      .schedule .days .list .item .item-link {
+        display: inline-block;
+        text-decoration: none;
+        font-family: "Panton Bold";
+        padding: 1em;
+        color: #333; }
+        .schedule .days .list .item .item-link:hover, .schedule .days .list .item .item-link.active {
+          color: #fff;
+          background-color: #1D8BF6; }
+  .schedule .room {
+    position: relative;
+    margin-top: 50px;
+    display: none; }
+    .schedule .room.active {
+      display: block; }
+    .schedule .room h1 {
+      text-align: left; }
+    .schedule .room .local {
+      color: #333;
+      padding-left: 1.5em;
+      font-weight: bold; }
+    .schedule .room .day-description {
+      margin: 0 0 50px 0; }
+      .schedule .room .day-description a {
+        color: #1D8BF6; }
+    .schedule .room:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5em;
+      height: calc(100% - 2em);
+      width: 2px;
+      background-color: #ccc; }
+    .schedule .room .lecture {
+      position: relative;
+      display: block;
+      padding: 0 25px;
+      margin: 25px 0; }
+      .schedule .room .lecture:before {
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: solid 2px #ccc;
+        background-color: white; }
+      .schedule .room .lecture time {
+        color: #333;
+        font-family: "Panton Bold"; }
+      .schedule .room .lecture .hour {
+        margin-bottom: 1em; }
+      .schedule .room .lecture .track {
+        display: inline;
+        padding: .2em .6em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em; }
+      .schedule .room .lecture .track-keynote {
+        background-color: #777; }
+      .schedule .room .lecture .track-lightning-talk {
+        background-color: #d9534f; }
+      .schedule .room .lecture .track-career {
+        background-color: #337ab7; }
+      .schedule .room .lecture .track-web {
+        background-color: #f0ad4e; }
+      .schedule .room .lecture .track-pydata {
+        background-color: #5bc0de; }
+      .schedule .room .lecture .track-beginners {
+        background-color: #5cb85c; }
+      .schedule .room .lecture .track-tutorials {
+        background-color: #f1c40f; }
+      .schedule .room .lecture .talk {
+        color: #1D8BF6;
+        font-family: "Panton Light";
+        padding-bottom: 0px; }
+      .schedule .room .lecture .speaker {
+        font-family: "Helvetica", sans-serif;
+        color: #333;
+        margin-bottom: 1.5em; }
+      .schedule .room .lecture .speaker:last-child {
+        margin-bottom: 4em; }
+
+.sponsors {
+  background-color: #f2f2f2;
+  padding: 4em 0; }
+  .sponsors h1 {
+    font-family: "Panton Light";
+    text-align: center;
+    color: #333; }
+  .sponsors .sponsors-list {
+    list-style: none;
+    font-size: 0;
+    margin: 0 -15px; }
+    .sponsors .sponsors-list:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .sponsors .sponsors-list .item {
+      font-size: 1rem;
+      vertical-align: top;
+      display: inline-block;
+      margin: 15px;
+      width: calc(25% - 30px); }
+      .sponsors .sponsors-list .item .category {
+        font-family: "Panton Light";
+        color: #333; }
+      .sponsors .sponsors-list .item .imgs {
+        padding-top: 25px; }
+        .sponsors .sponsors-list .item .imgs img {
+          height: 12em;
+          margin-right: 1em;
+          display: inline-block; }
+      .sponsors .sponsors-list .item .item-link {
+        text-decoration: none; }
+      .sponsors .sponsors-list .item .link {
+        font-style: italic; }
+    .sponsors .sponsors-list .no-sponsor {
+      background-color: #eaeaea;
+      display: table;
+      padding: 15px;
+      min-width: 20em; }
+      .sponsors .sponsors-list .no-sponsor:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%; }
+      .sponsors .sponsors-list .no-sponsor img {
+        margin-right: 1em;
+        width: 3em; }
+      .sponsors .sponsors-list .no-sponsor p {
+        color: #333; }
+  @media (max-width: 767px) {
+    .sponsors .sponsors-list .item {
+      width: calc(50% - 30px); } }
+
+.volunteers {
+  padding: 4em 0; }
+  .volunteers h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px; }
+  .volunteers ul {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px; }
+  .volunteers li {
+    list-style: none;
+    line-height: 30px; }
+  .volunteers a {
+    color: #1B77D8; }
+
+.footer {
+  padding: 2em 0;
+  background-color: #eaeaea; }
+  .footer .row {
+    position: relative; }
+  .footer p {
+    color: #333;
+    width: calc(90% - 4em); }
+  .footer img {
+    position: absolute;
+    float: right;
+    top: 50%;
+    right: 0;
+    width: 4em;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); }
+
+/*# sourceMappingURL=main.css.map */
