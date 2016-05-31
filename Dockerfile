@@ -15,7 +15,7 @@ ENV VENV_PIP    "${VENV_BIN}pip"
 # Build virtualenv with dependencies
 RUN virtualenv $VENV_ROOT
 COPY requirements.txt /tmp/requirements.txt
-RUN $VENV_PIP install -r /tmp/requirements.txt
+RUN $VENV_PIP install -q -r /tmp/requirements.txt
 
 # Prepare runtime environment
 ENV SITE_DIR ${ROOT_DIR}/site
