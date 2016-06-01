@@ -27,7 +27,7 @@ $ docker-compose up
 Em seguida acesse pelo navegador a URL [http://localhost:8000](http://localhost:8000).
 
 
-### **Instalação manual, the long-,detailed-way**
+### **Instalação manual, the safe- and detailed-way**
 
 Caso prefira a instalação e execução manual do site, os passos seguintes descrevem a instalação de dependências e execução.
 
