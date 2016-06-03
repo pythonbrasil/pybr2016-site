@@ -1,8 +1,13 @@
 FROM python
 
 # Install base dependencies for setup and dev runtime
-RUN apt-get update && apt-get install -y libxml2-dev libxslt1-dev python-dev python-virtualenv nodejs npm
-RUN npm install gulp gulp-uglify gulp-concat
+RUN apt-get -q update && apt-get -q install -y libxml2-dev libxslt1-dev python-dev python-virtualenv
+
+RUN apt-get -q update && apt-get -q install -y nodejs npm
+RUN npm install gulp gulp-uglify gulp-concat &>> /dev/build.log
+
+RUN apt-get -q update && apt-get -q install -y rubygems
+RUN gem install -q sass
 
 
 ENV ROOT_DIR /opt/pythonbrasil12-site
