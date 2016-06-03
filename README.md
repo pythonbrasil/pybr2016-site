@@ -24,10 +24,10 @@ Dentro da pasta do projeto, execute o seguinte comando:
 $ docker-compose up
 ```
 
-Em seguida acesse pelo navegador a URL [http://localhost:8000]
+Em seguida acesse pelo navegador a URL [http://localhost:8000](http://localhost:8000).
 
 
-### **Instalação manual, the long-,detailed-way**
+### **Instalação manual, the safe- and detailed-way**
 
 Caso prefira a instalação e execução manual do site, os passos seguintes descrevem a instalação de dependências e execução.
 
@@ -70,4 +70,4 @@ $ workon pybr12-site
 $ make html serve
 ```
 
-Em seguida acesse pelo navegador a URL http://localhost:8000
+Em seguida acesse pelo navegador a URL [http://localhost:8000](http://localhost:8000).
