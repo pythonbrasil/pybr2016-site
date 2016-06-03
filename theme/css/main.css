@@ -593,6 +593,24 @@ a:hover {
   .volunteers a {
     color: #1B77D8; }
 
+.followus {
+  padding: 4em 0; }
+  .followus h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px; }
+  .followus .social.facebook {
+    text-align: center; }
+  .followus ul {
+    -moz-column-count: 1;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 20px;
+    column-count: 1;
+    column-gap: 20px; }
+  .followus li {
+    list-style: none; }
+
 .footer {
   padding: 2em 0;
   background-color: #eaeaea; }
