@@ -1,0 +1,27 @@
+.followus {
+  padding: 4em 0;
+
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .social.facebook {
+    text-align: center;
+  }
+
+  ul {
+	$columns: 1;
+    -moz-column-count: $columns;
+    -moz-column-gap: 20px;
+    -webkit-column-count: $columns;
+    -webkit-column-gap: 20px;
+    column-count: $columns;
+    column-gap: 20px;
+  }
+
+  li {
+    list-style: none;
+  }
+}
