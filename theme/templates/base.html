@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="{{ SITEURL }}/theme/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/theme/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -10,7 +10,7 @@
     <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock %}">
 
     {% block style %}
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+    <link rel="stylesheet" href="/theme/css/main.css">
     {% endblock %}
   </head>
 
@@ -22,14 +22,14 @@
       <div class="row">
         <p>PythonBrasil is a non-proﬁt volunteer-driven conference for promoting the open-source Python programming language. It is supported by the Brazilian Python Association (APyB) and by the Python Software Foundation (PSF).</p>
 
-        <img src="{{ SITEURL }}/images/logo-gray.svg" alt="Python Brazil - Logo">
+        <img src="/images/logo-gray.svg" alt="Python Brazil - Logo">
       </div>
     </footer>
   </div>
 
   {% block javascript %}
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="{{ SITEURL }}/theme/js/main.js"></script>
+  <script src="/theme/js/main.js"></script>
   {% endblock %}
   </body>
 </html>
