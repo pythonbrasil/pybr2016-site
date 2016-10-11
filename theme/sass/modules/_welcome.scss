@@ -44,7 +44,7 @@
     }
 
     .menu {
-      float: left;
+      float: right;
       text-align: left;
 
       .list {
@@ -54,6 +54,7 @@
         margin: 0 -1em;
 
         .item {
+          font-size: .9em;
           display: inline-block;
 
           .item-link {
@@ -107,6 +108,7 @@
     @media(max-width: 905px) {
       .menu .list {
         font-size: .8em;
+        line-height: 2.2em;
         vertical-align: middle;
       }
     }
@@ -117,7 +119,17 @@
       }
 
       .menu {
-        display: none;
+        float: right;
+
+        .list {
+          .item {
+            display: none;
+
+            &:last-child {
+              display: block;
+            }
+          }
+        }
       }
     }
   }
