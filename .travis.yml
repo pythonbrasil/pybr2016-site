@@ -6,7 +6,7 @@ before_install:
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
 - git remote set-url origin git@github.com:pythonbrasil/pythonbrasil12-site.git
-- git fetch origin -f master:master
+- git fetch origin -f gh-pages:gh-pages
 
 install:
   - gem install sass
@@ -17,11 +17,12 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - make github
+# tenta construir o site, vai falhar caso haja algum erro
+  - make publish
 
 deploy:
   provider: script
-  script: make travis ping
+  script: make github ping
   on:
     branch: master
     condition: $TRAVIS_PULL_REQUEST = false
