@@ -89,6 +89,10 @@ github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 
+ping:
+	curl -Is http://www.google.com/webmasters/tools/ping?sitemap=http://2016.pythonbrasil.org.br/sitemap.xml | grep "200 OK" || echo "Erro pinging Google"
+	curl -Is http://www.bing.com/webmaster/ping.aspx?siteMap=http://2016.pythonbrasil.org.br/sitemap.xml | grep "200 OK" || echo "Erro pinging Bing"
+
 ansible-setup:
 	ansible-playbook ansible/setup.yml -K
 

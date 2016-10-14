@@ -1,7 +1,4 @@
 sudo: false
-branches:
-  only:
-  - master
 language: python
 before_install:
 - openssl aes-256-cbc -K $encrypted_efc81948d3a6_key -iv $encrypted_efc81948d3a6_iv -in publish-key.enc -out ~/.ssh/publish-key -d
@@ -9,10 +6,24 @@ before_install:
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
 - git remote set-url origin git@github.com:pythonbrasil/pythonbrasil12-site.git
-- git fetch origin -f master:master
-#install:
-#- pip install --upgrade pip
-#- pip install -r requirements.txt
-#add the rest of setup here
-#script:
-#- make github
+- git fetch origin -f gh-pages:gh-pages
+
+install:
+  - gem install sass
+  - cd theme
+  - npm install -g
+  - cd ..
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+script:
+# tenta construir o site, vai falhar caso haja algum erro
+  - make publish
+
+deploy:
+  provider: script
+  script: make github ping
+  on:
+    branch: master
+    condition: $TRAVIS_PULL_REQUEST = false
+
