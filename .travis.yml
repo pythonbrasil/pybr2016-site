@@ -10,9 +10,15 @@ before_install:
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
 - git remote set-url origin git@github.com:pythonbrasil/pythonbrasil12-site.git
 - git fetch origin -f master:master
-#install:
-#- pip install --upgrade pip
-#- pip install -r requirements.txt
-#add the rest of setup here
-#script:
-#- make github
+
+install:
+  - gem install sass
+  - cd theme
+  - npm install -g
+  - cd ..
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+script:
+  - make github
+
